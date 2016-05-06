@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_settingDistanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_settingdistance"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z_settingSeekBarOnSureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_orange"
+            android:padding="4dp"
+            android:text="确 定"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip" >
+
+        <TextView
+            android:id="@+id/z_settingSeekBarShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#cccccc"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <EditText
+            android:id="@+id/z_settingSeekBarShowEdit"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/z_map_searchbox"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/z_settingSeekBarShowEdit"
+            android:textColor="#cccccc"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="千米"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/z_settingSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="999"
+        android:maxHeight="8.0dip"
+        android:minHeight="8.0dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:progressDrawable="@drawable/z_po_seekbar"
+        android:thumb="@drawable/z_seekbar_thumb" />
+
+</LinearLayout>

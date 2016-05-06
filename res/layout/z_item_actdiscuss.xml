@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/z_mylistview_style_w"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:orientation="horizontal"
+            android:paddingLeft="6dp"
+            android:paddingTop="6dp" >
+
+            <pri.z.show.MyCircleImageView
+                android:id="@+id/z_actdiscuss_manhead"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip">
+
+                <TextView
+                    android:id="@+id/z_actdiscuss_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/z_color_moment_usernameman" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" >
+
+                    <TextView
+                        android:id="@+id/z_actdiscuss_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/z_color_msg_time" />
+
+                    <TextView
+                        android:id="@+id/z_actdiscuss_huifu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="回复"
+                        android:textColor="@color/z_color_titlebarbg" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/z_actdiscuss_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="38dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/z_color_commmenttext"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

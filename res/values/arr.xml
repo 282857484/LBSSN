@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item>string1</item>
+        <item>haha</item>
+        <item>heihei</item>
+        <item>string2</item>
+        <item>haha2</item>
+        <item>heihei2</item>
+        <item>string3</item>
+        <item>haha3</item>
+        <item>heihei3</item>
+        <item>string4</item>
+        <item>haha4</item>
+        <item>heihei4</item>
+    </string-array>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+    	<!-- 标题栏 -->
+    	<RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+  			android:background="@color/z_color_titlebarbg"
+  			android:gravity="center_vertical"  >
+      		<TextView
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="@string/z_str_infocenter"
+        		android:layout_centerInParent="true"
+        		android:textSize="20sp"		
+				android:textColor="@color/z_color_titlebartextbg" /> 
+		</RelativeLayout>
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+        <!-- 上面的一部分：用户各种信息：就是除了下面的四个按钮的其余部分 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:paddingRight="8dp"
+            android:paddingLeft="12dp">
+			<RelativeLayout 
+			     android:id="@+id/z_info_modify"
+			    android:layout_width="match_parent"
+	            android:layout_height="120dp"
+	            android:clickable="true"
+	            android:orientation="horizontal"
+	            android:background="#cccccc"
+			    >
+			    <ImageView
+			        android:id="@+id/z_userhead"
+			        android:layout_width="88dp"
+			        android:layout_height="88dp"
+			        android:layout_alignParentLeft="true"
+			        android:layout_marginTop="16dp"
+			        android:layout_marginLeft="24dp"/>
+			    <TextView
+			        android:id="@+id/z_userNickName"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="12dp"
+			        android:layout_toRightOf="@id/z_userhead"
+			        android:background="@android:color/transparent"
+			        android:textColor="#9966cc"
+			        android:layout_marginTop="38dp"
+			        android:textSize="28dip" />
+
+			</RelativeLayout>
+        </LinearLayout>
+        
+       <ListView 
+           android:id="@+id/z_infoCenterMenuListView"
+           android:layout_width="match_parent"
+           android:layout_height="400dp"
+           />
+    
+   </LinearLayout>
+   
+   
+    
+    </RelativeLayout>
+   </ScrollView>
+</LinearLayout>

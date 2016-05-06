@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/z_msg_dividerpadding"
+    android:paddingLeft="@dimen/z_msg_left"
+    android:paddingRight="@dimen/z_msg_right"
+    android:paddingTop="@dimen/z_msg_dividerpadding"  >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/z_itemMsgActivityStartUserHead"
+            android:layout_width="@dimen/z_msg_headwh"
+            android:layout_height="@dimen/z_msg_headwh" 
+            android:background="@drawable/z_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/z_itemMsgActivityStartUserHead" >
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityStartUserNameAndTimeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/z_itemMsgActivityStartUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="系统提示"
+                    android:textColor="@color/z_color_msg_username" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/z_color_msg_time" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/z_itemMsgActivityStartNoticeContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityStartUserNameAndTimeRel"
+                android:paddingBottom="8dp"
+                android:text="活动于 10:00 开始" />
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityStartItemRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityStartNoticeContent"
+                android:background="@drawable/z_myrel_style_lgray_msg"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/z_itemMsgActivityStartActLogo"
+                    android:layout_width="@dimen/z_msg_logowh"
+                    android:layout_height="@dimen/z_msg_logowh" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityStartActivityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dp"
+                    android:layout_toRightOf="@id/z_itemMsgActivityStartActLogo"
+                    android:layout_centerVertical="true"
+                    android:text="DoDetailThing"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    
+    
+
+</LinearLayout>

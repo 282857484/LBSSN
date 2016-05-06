@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/h_activity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <TextView
+        android:id="@+id/h_activity_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <TextView
+        android:id="@+id/h_activity_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <TextView
+        android:id="@+id/h_activity_hoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <TextView
+        android:id="@+id/h_activity_lasttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <TextView
+        android:id="@+id/h_activity_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="沃草" />
+
+    <Button
+        android:id="@+id/h_activity_mobliephonecall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="咨询电话" />
+
+
+</LinearLayout>

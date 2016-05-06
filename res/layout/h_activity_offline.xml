@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffffff">
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_offlinemap"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 隐藏输入法用 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="@dimen/z_offlinemap_left"
+        android:layout_marginRight="@dimen/z_offlinemap_right"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:background="@drawable/z_map_searchbox" >
+
+        <ImageButton
+            android:id="@+id/h_offline_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/z_searchicon"/>
+
+        <pri.z.show.ClearEditText
+            android:id="@+id/h_offline_city"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_toLeftOf="@id/h_offline_search"
+            android:drawableRight="@drawable/clear_normal_list"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:text="长沙市"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/h_offline_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="@dimen/z_offlinemap_left"
+        android:layout_marginRight="@dimen/z_offlinemap_right"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/h_offline_clButton"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:onClick="clickCityListButton"
+            android:textColor="#ffffffff"
+             android:background="@drawable/z_mybtn_style_blue"
+            android:text="城市列表" />
+
+        <Button
+            android:id="@+id/h_offline_localButton"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="clickLocalMapListButton"
+            android:textColor="#ffffffff"
+            android:background="@drawable/z_mybtn_style_blue"
+            android:text="下载管理" />
+
+        <Button
+            android:id="@+id/h_offline_scan"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:onClick="importFromSDCard"
+             android:background="@drawable/z_mybtn_style_blue"
+             android:textColor="#ffffffff"
+            android:text="导入地图"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/h_offline_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="@dimen/z_offlinemap_left"
+        android:layout_marginRight="@dimen/z_offlinemap_right" />
+
+    <LinearLayout
+        android:id="@+id/h_offline_citylist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#cccccc"
+            android:text="热门城市"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/h_offline_hotcitylist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/z_offlinemap_left"
+            android:layout_marginRight="@dimen/z_offlinemap_right"
+            android:dividerHeight="0.5dp"
+            android:divider="@drawable/z_smalldivider" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/h_offline_localmap_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#cccccc"
+            android:text="已下载地图 "
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/h_offline_localmaplist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:divider="@drawable/z_divider_gray" 
+            android:layout_marginLeft="@dimen/z_offlinemap_left"
+            android:layout_marginRight="@dimen/z_offlinemap_right" />
+    </LinearLayout>
+
+</LinearLayout>

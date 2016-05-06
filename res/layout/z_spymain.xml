@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+<!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_SpyMainGameTitleRel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_activityLocalTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择中..."
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/z_apyMainShowTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/z_SpyMainGameTitleRel"
+        android:gravity="center_horizontal"
+        android:text="请玩家依次传递手机进行抽签"
+        android:textSize="14sp" />
+    
+    <GridView 
+        android:id="@+id/z_spyMainGridView"
+        android:layout_below="@id/z_apyMainShowTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:numColumns="3"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        ></GridView>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <pri.z.main.XListView
+        android:id="@+id/z_list_moment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="6dp"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:paddingLeft="@dimen/z_moment_left"
+        android:paddingRight="@dimen/z_moment_right"
+        android:scrollingCache="false"/>
+
+    <ProgressBar
+        android:id="@+id/z_mainMomentProgressLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="14dp" />
+    
+    <RelativeLayout
+        android:id="@+id/z_momentNoDataRel"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/z_momentNoDataShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="没有数据了，您可以设置搜索范围\n或者分享自己的动态" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/z_momentNoDataShow"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/z_momentNoDataSetting"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:background="@drawable/z_mybtn_round_gray"
+                android:text="设置"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/z_momentNoDataShareMoment"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/z_mybtn_round_blue"
+                android:text="分享"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/z_momentNoDataRefresh"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/z_mybtn_round_gray"
+                android:text="刷新"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/z_noMomentRefreshData"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/z_norefreshdata"
+        android:visibility="gone" />
+
+</RelativeLayout>

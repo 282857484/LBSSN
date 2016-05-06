@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 会话 -->
+
+        <RelativeLayout
+            android:id="@+id/z_moreHXMessageRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/z_moreHXMessageItemICON"
+                android:layout_width="@dimen/z_more_lefticon_wh"
+                android:layout_height="@dimen/z_more_lefticon_wh"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/z_more_left"
+                android:background="@drawable/z_more_msgicon" />
+
+            <TextView
+                android:id="@+id/z_moreHXMessageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/z_more_item_height"
+                android:layout_toRightOf="@id/z_moreHXMessageItemICON"
+                android:layout_marginLeft="@dimen/z_more_iconleft"
+                android:gravity="center_vertical"
+                android:text="会话"
+                android:textSize="@dimen/z_more_item" />
+
+            <ImageView
+                android:id="@+id/z_moreHXMessageRedPoint"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/z_moreHXMessageItem"
+                android:src="@drawable/z_redpoint"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/z_userHXNameRightBg"
+                android:layout_width="@dimen/z_more_righticon_width"
+                android:layout_height="@dimen/z_more_righticon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/z_more_right"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+        
+         <!-- 通知 -->
+        <RelativeLayout
+            android:id="@+id/z_moreMessageRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white" >
+
+            <ImageView
+                android:id="@+id/z_moreMessageItemICON"
+                android:layout_width="@dimen/z_more_lefticon_wh"
+                android:layout_height="@dimen/z_more_lefticon_wh"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/z_more_left"
+                android:background="@drawable/z_more_msgicon" />
+
+            <TextView
+                android:id="@+id/z_moreMessageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/z_more_item_height"
+                android:layout_toRightOf="@id/z_moreMessageItemICON"
+                android:layout_marginLeft="@dimen/z_more_iconleft"
+                android:gravity="center_vertical"
+                android:text="消息"
+                android:textSize="@dimen/z_more_item" />
+
+            <ImageView
+                android:id="@+id/z_moreMessageRedPoint"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/z_moreMessageItem"
+                android:src="@drawable/z_redpoint"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/z_userNameRightBg"
+                android:layout_width="@dimen/z_more_righticon_width"
+                android:layout_height="@dimen/z_more_righticon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/z_more_right"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+
+        
+
+        
+        
+         <!-- 游戏 -->
+
+        <RelativeLayout
+            android:id="@+id/z_more_smallGameRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white" >
+
+            <ImageView
+                android:id="@+id/z_moreSmallGameItemICON"
+                android:layout_width="@dimen/z_more_lefticon_wh"
+                android:layout_height="@dimen/z_more_lefticon_wh"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/z_more_left"
+                android:background="@drawable/z_moregameicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/z_more_item_height"
+                 android:layout_toRightOf="@id/z_moreSmallGameItemICON"
+                android:layout_marginLeft="@dimen/z_more_iconleft"
+                android:gravity="center_vertical"
+                android:text="小游戏"
+                android:textSize="@dimen/z_more_item" />
+
+            <ImageView
+                android:layout_width="@dimen/z_more_righticon_width"
+                android:layout_height="@dimen/z_more_righticon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/z_more_right"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+        
+         <!-- 关于 -->
+
+        <RelativeLayout
+            android:id="@+id/z_moreAboutAppRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white" >
+
+            <ImageView
+                android:id="@+id/z_moreAboutAppItemICON"
+                android:layout_width="@dimen/z_more_lefticon_wh"
+                android:layout_height="@dimen/z_more_lefticon_wh"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/z_more_left"
+                android:background="@drawable/z_aboutapp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/z_more_item_height"
+                 android:layout_toRightOf="@id/z_moreAboutAppItemICON"
+                android:layout_marginLeft="@dimen/z_more_iconleft"
+                android:gravity="center_vertical"
+                android:text="关于"
+                android:textSize="@dimen/z_more_item" />
+
+            <ImageView
+                android:layout_width="@dimen/z_more_righticon_width"
+                android:layout_height="@dimen/z_more_righticon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/z_more_right"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+         <!-- 意见反馈 -->
+
+        <RelativeLayout
+            android:id="@+id/z_moreFeedBackRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white" >
+
+            <ImageView
+                android:id="@+id/z_moreFeedBackItemICON"
+                android:layout_width="@dimen/z_more_lefticon_wh"
+                android:layout_height="@dimen/z_more_lefticon_wh"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/z_more_left"
+                android:background="@drawable/z_feedback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/z_more_item_height"
+                 android:layout_toRightOf="@id/z_moreFeedBackItemICON"
+                android:layout_marginLeft="@dimen/z_more_iconleft"
+                android:gravity="center_vertical"
+                android:text="意见反馈"
+                android:textSize="@dimen/z_more_item" />
+
+            <ImageView
+                android:layout_width="@dimen/z_more_righticon_width"
+                android:layout_height="@dimen/z_more_righticon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/z_more_right"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+    </LinearLayout>
+
+</LinearLayout>

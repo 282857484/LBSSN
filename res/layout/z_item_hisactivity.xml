@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/z_item_bgbox"
+    android:orientation="horizontal"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mylistview_style_w"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/z_itemHisActLogoRel"
+            android:layout_width="90dp"
+            android:layout_height="90dp" >
+
+            <ImageView
+                android:id="@+id/z_itemHisActLogo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/z_logindefault" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/z_itemHisActLogoRel"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+
+            <TextView
+                android:id="@+id/z_itemHisActivityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ActivityName"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/z_acttime" />
+
+                    <TextView
+                        android:id="@+id/z_itemHisActivityStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textColor="@color/z_color_time" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

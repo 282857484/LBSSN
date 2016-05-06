@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/z_color_dialogbg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="选择图片" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/z_color_titlebarbg" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/z_dialogSelectAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:text="使用相册"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/z_dialogSelectCamera"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:text="使用相机"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/z_dialogSelectCansel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/z_mybtn_round_gray"
+            android:text="取 消"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

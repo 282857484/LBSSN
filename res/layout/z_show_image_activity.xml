@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_showImageTitleRel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_photoselect"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+        
+        <Button
+            android:id="@+id/z_selectPhotoFinishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_orange"
+            android:padding="4dp"
+            android:text="完 成"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_showImageTitleRel"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/child_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/z_selectPhotoFinishBtn"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="90dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="auto_fit"
+            android:padding="5dip"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dip" >
+        </GridView>
+    </LinearLayout>
+
+</RelativeLayout>

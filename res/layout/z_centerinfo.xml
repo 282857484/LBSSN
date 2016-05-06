@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_centerInfoTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人主页"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/z_centerInfoProgressBar"
+            android:layout_width="@dimen/z_titleprogress_wh"
+            android:layout_height="@dimen/z_titleprogress_wh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/z_centerInfoTitleTv"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/z_progressbarmycolor" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/z_centerInfoScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 上面的背景图片 -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp" >
+
+                <ImageView
+                    android:id="@+id/z_centerInfobgHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/z_momentcenterbg"
+                    android:orientation="horizontal" >
+                </ImageView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="55dp" >
+
+                    <pri.z.show.MyCircleImageView
+                        android:id="@+id/z_centerInfoUserHead"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="26dp" />
+                </RelativeLayout>
+            </FrameLayout>
+            <!-- 按钮 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="@dimen/z_centerinfo_left"
+                android:paddingRight="@dimen/z_centerinfo_right" >
+
+                <LinearLayout
+                    android:id="@+id/z_centerinfobtnLi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfoActivityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="活动"
+                        android:background="@drawable/z_mybtn_style_white"
+                        android:textColor="@color/z_color_titlebarbg"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfoMomentBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:text="动态"
+                        android:background="@drawable/z_mybtn_style_white"
+                        android:textColor="@color/z_color_titlebarbg"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/z_centerInfoLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 签名 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserDescribe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:paddingTop="4dp"
+                        android:textColor="#cccccc" />
+                </RelativeLayout>
+                <!-- 用户标签 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserTagsRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfoBelongsItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="标签"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <GridView
+                        android:id="@+id/z_centerInfouserTags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/z_centerInfoBelongsItem"
+                        android:horizontalSpacing="3dp"
+                        android:numColumns="4"
+                        android:stretchMode="columnWidth" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/z_smalldivider" />
+
+                <!-- 昵称 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserNameRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserNameTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="昵称"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserNameTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/z_smalldivider"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" />
+
+                <!-- 生日 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserBirthdayRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserBirthdayTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="生日"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserBirthdayTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/z_smalldivider"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" />
+
+                <!-- 家乡 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserHomeRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserHomeTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="家乡"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserHomeTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/z_smalldivider"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" />
+
+                <!-- 职业 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserProfessionRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserProfessionTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="职业"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserProfession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserProfessionTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/z_smalldivider"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" />
+
+                <!-- 学校 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserSchoolRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserSchooltvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="学校"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserSchool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserSchooltvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/z_smalldivider" />
+
+                <!-- 微信 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserWeixinRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserWeixinTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="微信"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserWeixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserWeixinTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/z_smalldivider"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" />
+
+                <!-- QQ -->
+
+                <RelativeLayout
+                    android:id="@+id/z_centerInfouserQQRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/z_centerinfo_tb"
+                    android:paddingTop="@dimen/z_centerinfo_tb"
+                    android:background="@drawable/z_myrel_style_item_myinfo_wgray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/z_centerinfo_left"
+                    android:paddingRight="@dimen/z_centerinfo_right" >
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserQQTvItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="Q Q"
+                        android:textSize="@dimen/z_centerinfo_item" />
+
+                    <TextView
+                        android:id="@+id/z_centerInfouserQQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_centerInfouserQQTvItem"
+                        android:gravity="right"
+                        android:textColor="@color/z_color_centerinfo_detail"
+                        android:textSize="@dimen/z_centerinfo_detail" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/z_smalldivider" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

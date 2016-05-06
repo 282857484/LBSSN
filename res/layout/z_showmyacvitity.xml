@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_myActivityTitleRel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_showMyActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_myactivity"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z_showMyActivityTitleSync"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_topright_btn_h"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:text="云同步"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize" />
+    </RelativeLayout>
+
+    <!-- 我的活动 -->
+
+    <ListView
+        android:id="@+id/z_myActivityListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_myActivityTitleRel"
+        android:layout_margin="5dp"
+        android:divider="@null"
+        android:dividerHeight="3dp" />
+
+    <RelativeLayout
+        android:id="@+id/z_myActHasNoDataRel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/z_myActHasNoDataImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_nodatabg" />
+
+        <Button
+            android:id="@+id/z_myActivityBuildActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/z_myActHasNoDataImg"
+            android:layout_marginTop="10dp"
+             android:layout_centerInParent="true"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:padding="5dp"
+            android:text="立即发起活动"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/z_myActivityLoadingRel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/z_myActLoadingProgressBar"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+
+            <Button
+                android:id="@+id/z_myActLoadingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="正在同步..."
+                android:textSize="16sp"
+                android:textColor="@color/z_color_yunsync" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

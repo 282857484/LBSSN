@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/z_msg_dividerpadding"
+    android:paddingLeft="@dimen/z_msg_left"
+    android:paddingRight="@dimen/z_msg_right"
+    android:paddingTop="@dimen/z_msg_dividerpadding" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/z_itemMsgActivityManagerGradeUserHead"
+            android:layout_width="@dimen/z_msg_headwh"
+            android:layout_height="@dimen/z_msg_headwh" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/z_itemMsgActivityManagerGradeUserHead" >
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityManagerGradeUserNameAndTimeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityManagerGradeUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="PushName"
+                    android:textColor="@color/z_color_msg_username" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityManagerGradeTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="LeaveWordTime"
+                    android:textColor="@color/z_color_msg_time" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/z_itemMsgActivityManagerGradeStatue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityManagerGradeUserNameAndTimeRel"
+                android:paddingBottom="8dp"
+                android:text="LeaveWordComment" />
+
+            <!-- 用户的评分还有评论 -->
+
+            <LinearLayout
+                android:id="@+id/z_itemMsgActivityManagerGradeRatingLi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityManagerGradeStatue"
+                android:orientation="vertical" >
+
+                <RatingBar
+                    android:id="@+id/z_itemMsgActivityManagerGradeRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityManagerGradeActivityItemRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityManagerGradeRatingLi"
+                android:background="@drawable/z_myrel_style_lgray_msg"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/z_itemMsgActivityManagerGradeActLogo"
+                    android:layout_width="@dimen/z_msg_logowh"
+                    android:layout_height="@dimen/z_msg_logowh" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityManagerGradeActivityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/z_itemMsgActivityManagerGradeActLogo"
+                    android:paddingLeft="6dp"
+                    android:text="DoDetailThing"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/z_itemMsgActivityManagerGradeShowAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityManagerGradeActivityItemRel"
+                android:layout_marginTop="4dp"
+                android:text="活动评分情况" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

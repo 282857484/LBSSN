@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 我主办的活动的包含联系方式 -->
+    <pri.z.show.MyCircleImageView 
+        android:id="@+id/z_itemMyMemberHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        />
+    <TextView
+         android:id="@+id/z_itemMyMemberPhone"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

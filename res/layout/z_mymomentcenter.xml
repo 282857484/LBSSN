@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_myMomentCenterTitleRel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_myMomentCenterTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_momentcenter"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/z_momentCenterProgressBar"
+            android:layout_width="@dimen/z_titleprogress_wh"
+            android:layout_height="@dimen/z_titleprogress_wh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/z_myMomentCenterTitleName"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/z_progressbarmycolor" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/z_mycenterInfobgImg"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/z_momentcenterbg"
+            android:orientation="horizontal" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="70dp" >
+
+            <ImageView
+                android:id="@+id/z_myMomentCenterUserHead"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="26dp" />
+
+            <TextView
+                android:id="@+id/z_mycenterInfoAddBg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/z_centerInfoUserHead"
+                android:background="#ffffffff"
+                android:text="更改封面"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <pri.z.main.XListView
+        android:id="@+id/z_momentcenterMomentlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_myMomentCenterTitleRel"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:paddingLeft="@dimen/z_moment_left"
+        android:paddingRight="@dimen/z_moment_right"
+        android:scrollingCache="false"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/z_myMomentCenterNoNetImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/z_hasnonet"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/z_momentCenterNoDataRel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/z_momentCenterNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_nodatabg" />
+
+        <Button
+            android:id="@+id/z_myMomentCenterShareMomentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/z_momentCenterNoData"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:padding="5dp"
+            android:text="立即分享动态"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

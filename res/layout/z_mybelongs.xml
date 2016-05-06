@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_belongs"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z_belongsComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_orange"
+            android:padding="4dp"
+            android:text="完 成"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="我的标签 （点击可删除）"
+        android:textColor="@color/z_color_titlebarbg"/>
+
+    <RelativeLayout
+        android:id="@+id/z_belongs_selected"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp" >
+
+        <GridView
+            android:id="@+id/z_belongsgridselected"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:numColumns="3"
+            android:paddingTop="5dp"
+            android:horizontalSpacing="3dp"
+            android:listSelector="#00000000"
+            android:verticalSpacing="3dp"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:text="选择标签，有爱好才有伙伴 （点击可选择）"
+        android:textColor="@color/z_color_titlebarbg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp" >
+
+        <GridView
+            android:id="@+id/z_belongsgrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:paddingTop="5dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+</LinearLayout>

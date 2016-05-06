@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- normal -->
+	<item android:state_pressed="false" >
+	    <shape android:shape="rectangle">
+            <gradient android:angle="270" 
+                android:endColor="@drawable/z_drawable_purple_normal" 
+                android:startColor="@drawable/z_drawable_purple_normal" />
+
+            <corners android:bottomLeftRadius="5dip" 
+                android:bottomRightRadius="5dip" 
+                android:topLeftRadius="5dip" 
+                android:topRightRadius="5dip" />
+        </shape>
+	</item>
+    
+    <!-- pressed -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" 
+                android:endColor="@drawable/z_drawable_purple_pressed" 
+                android:startColor="@drawable/z_drawable_purple_pressed" />
+
+            <corners android:bottomLeftRadius="5dip" 
+                android:bottomRightRadius="5dip" 
+                android:topLeftRadius="5dip" 
+                android:topRightRadius="5dip" />
+        </shape></item>
+
+    <!-- focus -->
+    <item android:state_focused="true"><shape>
+            <gradient android:angle="270" 
+                android:endColor="@drawable/z_drawable_purple_pressed" 
+                android:startColor="@drawable/z_drawable_purple_pressed" />
+
+            <corners android:bottomLeftRadius="5dip" 
+                android:bottomRightRadius="5dip" 
+                android:topLeftRadius="5dip" 
+                android:topRightRadius="5dip" />
+        </shape></item>
+        
+    <!-- selected -->
+    <item android:state_selected="true"><shape>
+            <gradient android:angle="270" 
+                android:endColor="@drawable/z_drawable_purple_pressed" 
+                android:startColor="@drawable/z_drawable_purple_pressed" />
+
+            <corners android:bottomLeftRadius="5dip" 
+                android:bottomRightRadius="5dip" 
+                android:topLeftRadius="5dip" 
+                android:topRightRadius="5dip" />
+        </shape></item>
+        
+    
+    
+    <item><shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+
+             <corners android:bottomLeftRadius="5dip" 
+                android:bottomRightRadius="5dip" 
+                android:topLeftRadius="5dip" 
+                android:topRightRadius="5dip" />
+        </shape></item>
+
+</selector>

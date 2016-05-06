@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="expand_tab_item_height">45dp</dimen>
+    <dimen name="expand_tab_eara_height">380dp</dimen>
+    <dimen name="text_font_size_super">33sp</dimen>
+    <dimen name="text_font_size_large">26sp</dimen>
+    <dimen name="text_font_size_medium">20sp</dimen>
+    <dimen name="text_font_size_normal">17sp</dimen>
+    <dimen name="text_font_size_small">14sp</dimen>
+    <dimen name="z_actdetail_titlesize">20sp</dimen>
+    <dimen name="z_actdetail_itemnamesize">20sp</dimen>
+    <dimen name="z_actdetail_commomsize">16sp</dimen>
+    <dimen name="z_actdetail_left">8dp</dimen>
+    <dimen name="z_actdetail_right">8dp</dimen>
+    <dimen name="z_activitydetail_item">16sp</dimen>
+    <dimen name="z_activitydetail_jiange">12dp</dimen>
+    <dimen name="z_activitydetail_hangju">10dp</dimen>
+
+    <!-- depend -->
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="min_Height">64dip</dimen>
+    <dimen name="image_width">60dip</dimen>
+
+    <!-- ZZK0901  界面调试尺寸 -->
+	<!-- 标题的高度 -->
+	<dimen name="z_title_h">45dp</dimen>
+
+    <!-- 我的资料 -->
+    <dimen name="z_myinfo_item">18sp</dimen>
+    <dimen name="z_myinfo_left">10dp</dimen>
+    <dimen name="z_myinfo_right">10dp</dimen>
+    <dimen name="z_myinfo_detail">16sp</dimen>
+
+    <!-- 创建活动 -->
+    <dimen name="z_addactivity_item">16sp</dimen>
+    <dimen name="z_addactivity_left">12dp</dimen>
+    <dimen name="z_addactivity_right">12dp</dimen>
+    <dimen name="z_addactivity_jiange">12dp</dimen>
+    <dimen name="z_addactivity_hangju">16dp</dimen>
+
+    <!-- 设置 -->
+    <dimen name="z_setting_item">18sp</dimen>
+    <dimen name="z_setting_detail">14sp</dimen>
+    <dimen name="z_setting_left">16dp</dimen>
+    <dimen name="z_setting_right">16dp</dimen>
+    <dimen name="z_setting_top">10dp</dimen>
+    <dimen name="z_setting_bottom">10dp</dimen>
+
+    <!-- 注册 -->
+    <dimen name="z_reg_item">18sp</dimen>
+    <dimen name="z_reg_left">16dp</dimen>
+    <dimen name="z_reg_right">16dp</dimen>
+    <dimen name="z_reg_top">6dp</dimen>
+    <dimen name="z_reg_bottom">6dp</dimen>
+
+    <!-- 其他用户的个人主页 -->
+    <dimen name="z_centerinfo_item">18sp</dimen>
+    <dimen name="z_centerinfo_detail">16sp</dimen>
+    <dimen name="z_centerinfo_left">10dp</dimen>
+    <dimen name="z_centerinfo_right">10dp</dimen>
+    <dimen name="z_centerinfo_tb">4dp</dimen>
+
+    <!-- 离线地图 -->
+    <dimen name="z_offlinemap_item">16sp</dimen>
+    <dimen name="z_offlinemap_left">10dp</dimen>
+    <dimen name="z_offlinemap_right">10dp</dimen>
+
+    <!-- 动态栏 -->
+    <dimen name="z_moment_left">10dp</dimen>
+    <dimen name="z_moment_right">10dp</dimen>
+
+    <!-- 更多 -->
+    <dimen name="z_more_righticon_width">16dp</dimen>
+    <dimen name="z_more_righticon_height">24dp</dimen>
+    <dimen name="z_more_item_height">45dp</dimen>
+    <dimen name="z_more_lefticon_wh">35dp</dimen>
+    <dimen name="z_more_item">18sp</dimen>
+    <dimen name="z_more_left">20dp</dimen>
+    <dimen name="z_more_iconleft">10dp</dimen>
+    <dimen name="z_more_right">10dp</dimen>
+
+    <!-- 消息中心 -->
+    <dimen name="z_msg_headwh">45dp</dimen>
+    <dimen name="z_msg_left">6dp</dimen>
+    <dimen name="z_msg_right">6dp</dimen>
+    <dimen name="z_msg_dividerpadding">4dp</dimen>
+    <dimen name="z_msg_logowh">35dp</dimen>
+
+    <!-- 动态详情 -->
+    <dimen name="z_momentdetail_lr">6dp</dimen>
+    <dimen name="z_sharemoment_lr">12dp</dimen>
+
+    <!-- 按钮尺寸 -->
+    <dimen name="z_mybtnsize">18sp</dimen>
+    <dimen name="z_myedittextsize">16sp</dimen>
+    <dimen name="z_topright_r">20dp</dimen>
+    <dimen name="z_titleprogress_wh">20dp</dimen>
+    <dimen name="z_topright_btn_h">35dp</dimen>
+
+    
+    <!-- 1206环信 -->
+    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="padding_search_bar">5dp</dimen>
+    <dimen name="height_row_weixin">59dp</dimen>
+    <dimen name="size_avatar">50dp</dimen>
+    <dimen name="margin_chat_activity">5dp</dimen>
+    <dimen name="field_textsize">14sp</dimen>
+    <dimen name="field_margin_right">5dp</dimen>
+    <dimen name="call_button_padding_vertical">10dp</dimen>
+    <dimen name="call_button_padding_left">25dp</dimen>
+    <dimen name="call_button_padding_right">25dp</dimen>
+    <dimen name="sidebar_text_size">10dp</dimen>
+     <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    
+</resources>

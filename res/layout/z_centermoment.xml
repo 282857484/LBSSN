@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_centerMomentTitleRel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_centerMomentTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_centermoment"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/z_centerMomentProgressBar"
+            android:layout_width="@dimen/z_titleprogress_wh"
+            android:layout_height="@dimen/z_titleprogress_wh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/z_centerMomentTitleName"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/z_progressbarmycolor" />
+    </RelativeLayout>
+
+    <pri.z.main.XListView
+        android:id="@+id/z_centerMomentlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_centerMomentTitleRel"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:paddingLeft="@dimen/z_moment_left"
+        android:paddingRight="@dimen/z_moment_right"
+        android:scrollingCache="false"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/z_centerMomentNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/z_nodatabg"
+        android:visibility="gone" />
+
+    
+
+</RelativeLayout>

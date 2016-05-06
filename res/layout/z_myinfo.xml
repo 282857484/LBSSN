@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_info"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 用户头像 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="头像"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userheadmodifyRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <pri.z.show.MyCircleImageView
+                    android:id="@+id/z_userheadmodify"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userheadmodifyRightBg" />
+            </RelativeLayout>
+
+            <!-- 用户标签 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userTagsRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" 
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray">
+
+                <TextView
+                    android:id="@+id/z_myinfoBelongsItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="标签"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userTagsRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <GridView
+                    android:id="@+id/z_userTags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@id/z_userTagsRightBg"
+                    android:layout_toRightOf="@id/z_myinfoBelongsItem"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:paddingLeft="5dp"
+                    android:stretchMode="columnWidth" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- 昵称 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userNameRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" 
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray">
+
+                <TextView
+                    android:id="@+id/z_userNameTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="昵称"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userNameRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userNameRightBg"
+                    android:layout_toRightOf="@id/z_userNameTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail"
+                    android:textColor="@color/z_color_myinfo_detail" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/z_myinfo_left"
+                android:layout_marginRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- 生日 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userBirthdayRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" 
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="生日"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userBirthdayRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="right"
+                    android:layout_toLeftOf="@id/z_userBirthdayRightBg"
+                    android:textSize="@dimen/z_myinfo_detail"
+                    android:textColor="@color/z_color_myinfo_detail" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/z_myinfo_left"
+                android:layout_marginRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- 家乡 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userHomeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray" >
+
+                <TextView
+                    android:id="@+id/z_userHomeTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="家乡"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userHomeRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userHomeRightBg"
+                    android:layout_toRightOf="@id/z_userHomeTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail" 
+                    android:textColor="@color/z_color_myinfo_detail"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/z_myinfo_left"
+                android:layout_marginRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- 职业 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userProfessionRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray" >
+
+                <TextView
+                    android:id="@+id/z_userProfessionTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="职业"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userProfessionRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userProfession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userProfessionRightBg"
+                    android:layout_toRightOf="@id/z_userProfessionTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail"
+                    android:textColor="@color/z_color_myinfo_detail" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/z_myinfo_left"
+                android:layout_marginRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- 学校 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userSchoolRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" 
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray">
+
+                <TextView
+                    android:id="@+id/z_userSchoolTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="学校"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userSchoolRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userSchoolRightBg"
+                    android:layout_toRightOf="@id/z_userSchoolTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail"
+                    android:textColor="@color/z_color_myinfo_detail" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/z_smalldivider"  />
+
+            <!-- 微信 -->
+
+            <RelativeLayout
+                android:id="@+id/z_userWeixinRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray" >
+
+                <TextView
+                    android:id="@+id/z_userWeixinTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="微信号"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userWeixinRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userWeixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userWeixinRightBg"
+                    android:layout_toRightOf="@id/z_userWeixinTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail"
+                    android:textColor="@color/z_color_myinfo_detail" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/z_myinfo_left"
+                android:layout_marginRight="@dimen/z_myinfo_right"
+                android:background="@drawable/z_smalldivider" />
+
+            <!-- QQ -->
+
+            <RelativeLayout
+                android:id="@+id/z_userQQRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/z_myinfo_left"
+                android:paddingRight="@dimen/z_myinfo_right" 
+                android:background="@drawable/z_myrel_style_item_myinfo_wgray">
+
+                <TextView
+                    android:id="@+id/z_userQQTvItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="QQ"
+                    android:textSize="@dimen/z_myinfo_item" />
+
+                <ImageView
+                    android:id="@+id/z_userQQRightBg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/z_myinforightbg" />
+
+                <TextView
+                    android:id="@+id/z_userQQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/z_userQQRightBg"
+                    android:layout_toRightOf="@id/z_userQQTvItem"
+                    android:paddingLeft="8dp"
+                    android:gravity="right"
+                    android:textSize="@dimen/z_myinfo_detail" 
+                    android:textColor="@color/z_color_myinfo_detail"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                android:background="@drawable/z_smalldivider"  />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

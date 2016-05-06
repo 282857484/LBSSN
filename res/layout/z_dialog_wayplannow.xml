@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/z_color_dialogmapbg" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="路线规划 " />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/z_color_titlebarbg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/z_wayplanDialogQiDian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="起点" />
+
+                <pri.z.show.LineEditText
+                    android:id="@+id/h_startaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/z_wayplanDialogQiDian"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:selectAllOnFocus="true" >
+
+                    <requestFocus />
+                </pri.z.show.LineEditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/z_wayplanDialogZhongDian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="终点" />
+
+                <pri.z.show.LineEditText
+                    android:id="@+id/h_endaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/z_wayplanDialogZhongDian"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:selectAllOnFocus="true" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/h_wayplans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp" >
+
+                <RadioButton
+                    android:id="@+id/h_transitsearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="公交"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/h_walksearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="步行"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/h_drivesearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="驾车"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/z_dialogSearchWay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_mybtn_round_blue"
+                    android:text="查询"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/z_dialogSearchDismiss"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_mybtn_round_gray"
+                    android:text="取消"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

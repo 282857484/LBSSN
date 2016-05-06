@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@color/z_color_titlebarbg"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/z_str_commonsetting"
+                android:textColor="@color/z_color_titlebartextbg"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <!-- 活动搜索范围 -->
+
+        <RelativeLayout
+            android:id="@+id/z_settingActivityDistanceRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white"
+            android:paddingBottom="@dimen/z_setting_bottom"
+            android:paddingLeft="@dimen/z_setting_left"
+            android:paddingRight="@dimen/z_setting_right"
+            android:paddingTop="@dimen/z_setting_top" >
+
+            <ImageView
+                android:id="@+id/z_settingActivityDistanceBtnICON"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/z_settingactivityicon" />
+
+            <TextView
+                android:id="@+id/z_settingActivityDistanceBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_settingActivityDistanceBtnICON"
+                android:text="@string/z_str_settingactivitydistance"
+                android:textColor="@color/z_color_settingmenu"
+                android:textSize="@dimen/z_setting_item" />
+
+            <TextView
+                android:id="@+id/z_settingActivityDistanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:layout_centerInParent="true"
+                android:textColor="@color/z_color_titlebarbg"
+                android:textSize="@dimen/z_setting_detail" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+
+        <!-- 动态搜索范围 -->
+
+        <RelativeLayout
+            android:id="@+id/z_settingMomentDistanceRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white"
+            android:paddingBottom="@dimen/z_setting_bottom"
+            android:paddingLeft="@dimen/z_setting_left"
+            android:paddingRight="@dimen/z_setting_right"
+            android:paddingTop="@dimen/z_setting_top" >
+
+            <ImageView
+                android:id="@+id/z_settingMomentDistanceBtnICON"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/z_settingmomenticon" />
+
+            <TextView
+                android:id="@+id/z_settingMomentDistanceBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_settingMomentDistanceBtnICON"
+                android:text="@string/z_str_settingmomentdistance"
+                android:textColor="@color/z_color_settingmenu"
+                android:textSize="@dimen/z_setting_item" />
+
+            <TextView
+                android:id="@+id/z_settingMomentDistanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center|right"
+                android:textColor="@color/z_color_titlebarbg"
+                android:textSize="@dimen/z_setting_detail" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+
+        <!-- 动态搜索范围 -->
+
+        <RelativeLayout
+            android:id="@+id/z_settingInviteFriendsRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_style_white"
+            android:paddingBottom="@dimen/z_setting_bottom"
+            android:paddingLeft="@dimen/z_setting_left"
+            android:paddingRight="@dimen/z_setting_right"
+            android:paddingTop="@dimen/z_setting_top" >
+
+            <ImageView
+                android:id="@+id/z_settingInviteFriendsICON"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/z_invitefriend" />
+
+            <TextView
+                android:id="@+id/z_settingInviteFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_settingInviteFriendsICON"
+                android:text="@string/z_str_settinginvitefriend"
+                android:textColor="@color/z_color_settingmenu"
+                android:textSize="@dimen/z_setting_item" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/z_more_msg_righticon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/z_smalldivider" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/z_infoExitLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/z_mybtn_round_red"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/z_str_infoexit"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

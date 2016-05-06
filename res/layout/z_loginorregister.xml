@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_title_infologin"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:text="注 册"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Twitter -->
+
+        <LinearLayout
+            android:id="@+id/login_div"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:layout_marginTop="35dip"
+            android:background="@drawable/z_background_login_div_bg"
+            android:orientation="vertical" >
+
+            <!-- 账号 -->
+
+            <LinearLayout
+                android:id="@+id/login_div_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <pri.z.show.LineEditText
+                    android:id="@+id/z_login_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:hint="手机号"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <!-- 密码 text -->
+
+            <LinearLayout
+                android:id="@+id/login_div_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_div_phone"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <pri.z.show.LineEditText
+                    android:id="@+id/z_login_userpwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:digits="@string/z_edittext_nochinese"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <!-- 忘记密码 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp" >
+
+                <TextView
+                    android:id="@+id/z_loginForgetPwdBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:inputType="textWebEditText"
+                    android:text="忘记密码？" />
+            </RelativeLayout>
+            <!-- 登录/注册 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal"
+                android:paddingTop="12dp" >
+
+                <Button
+                    android:id="@+id/z_loginbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/z_mybtn_round_blue"
+                    android:text="登 录"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/z_mybtnsize" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp" >
+
+                <ProgressBar
+                    android:id="@+id/z_loginingProgressBar1"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

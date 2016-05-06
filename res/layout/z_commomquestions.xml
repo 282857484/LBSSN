@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical" >
+    <ScrollView 
+         android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+        >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical"
+	        >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="
+	1
+	
+	微信公众帐号认证通过后，资料是否可以修改？
+	
+	答：认证通过后资料不可以修改，
+	 
+	
+	2
+	 
+	
+	微信公众帐号认证通过后，微博内容如何同步？
+	
+	答：认证通过后，资料会和微博当前的认证内容同步，后续修改的微博认证资料不会同步到微信公众号“微信认证资料”处。
+	 
+	
+	3
+	 
+	
+	一个认证微博可以认证几个微信公众帐号？
+	
+	答：一个认证微博只能认证一个微信公众帐号。
+	 
+	
+	4
+	 
+	
+	微信公众帐号与微博昵称不同，是否可以认证通过？
+	
+	答：申请微信公众号认证时，关联的微博帐号昵称必须与公众帐号昵称一致，公众帐号昵称可以重复。
+	 
+	
+	5
+	 
+	
+	微信公众帐号认证时，认证微博是否区分个人和企业？
+	
+	答：个人认证和企业认证的腾讯微博/新浪微博，都可以申请认证微信公众帐号。
+	 
+	
+	6
+	 
+	
+	微信公众帐号认证审核需要多久？
+	
+	答：通过微博认证，人工审核期为15个工作日，审核结果在登录公众平台后可以看到。
+	
+	        "
+	        />
+	    <TextView 
+	        android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingTop="30dp"
+	        />
+		</LinearLayout>
+	</ScrollView>
+	<Button 
+	    android:id="@+id/z_que_ask"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="反馈我的问题"
+	    android:textColor="#339966"
+	    android:layout_alignParentBottom="true"
+	    />
+</RelativeLayout>

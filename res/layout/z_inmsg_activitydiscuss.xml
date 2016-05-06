@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_inmsgactdis"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z_inMsgActityDiscussReplySendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_green"
+            android:padding="4dp"
+            android:text="发 送"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <pri.z.show.MyCircleImageView
+                    android:id="@+id/z_inMsgActDisUserHead"
+                    android:layout_width="@dimen/z_msg_logowh"
+                    android:layout_height="@dimen/z_msg_logowh" />
+
+                <TextView
+                    android:id="@+id/z_inMsgActityDiscussUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/z_inMsgActDisUserHead"
+                    android:text="UserName"
+                    android:textColor="@color/z_color_msg_username" />
+
+                <TextView
+                    android:id="@+id/z_inMsgActityDiscussTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="time"
+                    android:textColor="@color/z_color_msg_time" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/z_inMsgActityDiscussContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/z_msg_logowh"
+                android:text="MsgActityDiscussContent" />
+
+            <RelativeLayout
+                android:id="@+id/z_inMsgActDisItemRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:layout_marginLeft="@dimen/z_msg_logowh"
+                android:background="@color/z_color_msg_activitybg"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/z_inMsgActDisLogo"
+                    android:layout_width="@dimen/z_msg_logowh"
+                    android:layout_height="@dimen/z_msg_logowh" />
+                <TextView
+                android:id="@+id/z_inMsgActityDiscussActName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_inMsgActDisLogo"
+                android:paddingLeft="5dp"
+                android:text="ActivityName" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp" >
+
+                <EditText
+                    android:id="@+id/z_inMsgActityDiscussReplyEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="回复什么吧..."
+                    android:textSize="@dimen/z_myedittextsize" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

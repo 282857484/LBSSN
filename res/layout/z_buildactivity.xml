@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="top"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_buildactivity"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/z_buildActivityMustLi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/z_addactivity_left"
+                android:layout_marginRight="@dimen/z_addactivity_right"
+                android:orientation="vertical" >
+
+                <!-- 活动类型 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityTypeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="类型"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.h.semap.chooseview.ExpandTabView
+                        android:id="@+id/z_buildActivityTypeExpand"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/z_addActvityTypeItem" />
+                </RelativeLayout>
+                <!-- 活动logo -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="活动Logo"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <ImageView
+                        android:id="@+id/z_activityLogoImg"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/z_addphotoicon"
+                        android:scaleType="fitXY" />
+                    
+                    <Button
+                        android:id="@+id/z_buildActivityModifyLogoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_activityLogoImg"
+                        android:layout_centerInParent="true"
+                        android:text="修改"
+                        android:layout_marginLeft="20dp"
+                        android:padding="5dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_addactivity_item"
+                        android:visibility="gone"
+                        android:background="@drawable/z_zbtn_roundstyle_purple" />
+                </RelativeLayout>
+                <!-- 活动名称 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityNameItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="名称"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityNameEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_addActvityNameItem"
+                        android:background="@null"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true" />
+                </RelativeLayout>
+                
+                <!-- 描述 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityDiscribeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="活动描述"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <EditText
+                        android:id="@+id/z_buildActivityDescribe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_addActvityDiscribeItem"
+                        android:background="@null"
+                        android:hint="描述一下活动..."
+                        android:maxLength="500" />
+                </RelativeLayout>
+
+                <!-- 地址 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityPlaceItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="地址"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityAddressEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_addActvityPlaceItem"
+                        android:background="@null"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="点击进入地图选址" />
+                </RelativeLayout>
+
+                <!-- 具体地址 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityDetailPlaceItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="具体地址"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityAddressDetailEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/z_addActvityDetailPlaceItem"
+                        android:background="@null"
+                        android:maxLength="50" />
+                </RelativeLayout>
+
+                <!-- 开始时间 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityBeginTimeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="开始时间"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/z_addActvityBeginTimeItem"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="点击设置"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <!-- 参加人数 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityMaxNumItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="参加人数"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityNumEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/z_addActvityMaxNumItem"
+                        android:background="@null"
+                        android:hint="不少于2人"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp" >
+
+                    <Button
+                        android:id="@+id/z_buildActivityNextBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/z_zbtn_roundstyle_lgreen"
+                        android:text="下一步 "
+                        android:padding="5dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_mybtnsize" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/z_buildActivityNoMustLi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/z_addactivity_left"
+                android:layout_marginRight="@dimen/z_addactivity_right"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 上一步 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <Button
+                        android:id="@+id/z_buildActivityBeforeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/z_zbtn_roundstyle_lgreen"
+                        android:text="上一步"
+                        android:padding="5dp"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_mybtnsize" />
+                </RelativeLayout>
+
+                <!-- 主办人 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityhosterItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="主办单位"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_buildActivityHoster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/z_addActvityhosterItem"
+                        android:background="@null"
+                        android:maxLength="50" />
+                </RelativeLayout>
+
+                <!-- 结束时间 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityEndTimeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="结束时间"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <pri.z.show.LineEditText
+                        android:id="@+id/z_BuildActivityEndTimeEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/z_addActvityEndTimeItem"
+                        android:background="@null"
+                        android:hint="点击设置"
+                        android:editable="false"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <!-- 验证参加 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_addactivity_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_addActvityAttendCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/z_addactivity_jiange"
+                        android:text="验证参加"
+                        android:textSize="@dimen/z_addactivity_item" />
+
+                    <RadioGroup
+                        android:id="@+id/z_buildActivityRG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_addActvityAttendCheck"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/z_buildActivityDirectJoinRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="无需验证" />
+
+                        <RadioButton
+                            android:id="@+id/z_buildActivityNoDirectJoinRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="验证" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical" >
+
+                    <Button
+                        android:id="@+id/z_buildActivitySubmitBtn"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/z_mybtn_round_blue"
+                        android:text="发   起"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_mybtnsize" />
+
+                    <ProgressBar
+                        android:id="@+id/z_buildActivitySubmittingProgress"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/z_buildActivitySubmitBtn"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

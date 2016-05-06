@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_actDetailTitleRel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_activityDetailTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_actdetail"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/z_detailActProgressBar"
+            android:layout_width="@dimen/z_titleprogress_wh"
+            android:layout_height="@dimen/z_titleprogress_wh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/z_activityDetailTitleName"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/z_progressbarmycolor" />
+
+        <Button
+            android:id="@+id/z_actDetailModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_green"
+            android:padding="4dp"
+            android:text="修 改"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/z_activityDetailNoNetImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/z_hasnonet"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/z_activityDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/z_actDetailTitleRel"
+        android:paddingLeft="@dimen/z_actdetail_left"
+        android:paddingRight="@dimen/z_actdetail_right"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 活动的图片 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/z_actDetailLogo"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/z_logindefault" />
+
+                <LinearLayout
+                    android:id="@+id/z_downBtnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/z_actDetailLogo"
+                    android:orientation="horizontal"
+                    android:visibility="invisible" >
+
+                    <Button
+                        android:id="@+id/z_actdetail_attend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/z_mybtn_round_blue"
+                        android:text="@string/z_str_attendactvity"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+
+                    <Button
+                        android:id="@+id/z_actdetail_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/z_mybtn_round_blue"
+                        android:text="@string/z_str_attentionactivity"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+
+                    <Button
+                        android:id="@+id/z_actdetail_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/z_mybtn_round_blue"
+                        android:text="@string/z_str_share"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 第一卡片 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_map_searchbox"
+                android:orientation="vertical"
+                android:paddingLeft="5dp" >
+
+                <!-- 活动名称 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_nameItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="名称"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@id/z_actdetail_nameItem"
+                        android:textSize="@dimen/z_actdetail_titlesize" />
+                </RelativeLayout>
+
+                <!-- 活动类型 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_classItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="类型"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_actdetail_classItem"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+
+                <!-- 开始时间 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_starttimeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="时间"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_starttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_actdetail_starttimeItem"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+
+                <!-- 地址 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_addressItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="地址"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <ImageView
+                        android:id="@+id/z_actdetail_addressImg"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/z_luxianicon" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/z_actdetail_addressImg"
+                        android:layout_toRightOf="@id/z_actdetail_addressItem"
+                        android:background="@drawable/z_mybtn_style_white"
+                        android:textColor="#0000ff"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+                <!-- 主办人 -->
+
+                <RelativeLayout
+                    android:id="@+id/z_actDetailHostRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_hostItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="主办单位"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_host"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_actdetail_hostItem"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+
+                <!-- 描述 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/z_activitydetail_hangju"
+                    android:layout_marginTop="@dimen/z_activitydetail_hangju" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_describeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:text="活动描述"
+                        android:textSize="@dimen/z_activitydetail_item" />
+
+                    <TextView
+                        android:id="@+id/z_actdetail_describe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_actdetail_describeItem"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 第二卡片 :参加成员 -->
+
+            <LinearLayout
+                android:id="@+id/z_actdetailMembersLi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/z_map_searchbox"
+                android:orientation="vertical"
+                android:paddingLeft="5dp" >
+
+                <!-- 参加成员 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/z_activitydetail_hangju"
+                    android:layout_marginTop="5dp" >
+
+                    <LinearLayout
+                        android:id="@+id/z_actdetail_numberItemLi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/z_activitydetail_jiange"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/z_actdetail_numberItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参加成员"
+                            android:textSize="@dimen/z_activitydetail_item" />
+
+                        <TextView
+                            android:id="@+id/z_actdetail_numberManagerTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/z_mybtn_style_white"
+                            android:text="管理成员"
+                            android:textColor="@color/z_color_titlebarbg"
+                            android:textSize="@dimen/z_activitydetail_item"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/z_actdetail_numberItemLi"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/z_actdetail_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/z_actdetail_commomsize" />
+
+                        <pri.z.show.PhotoGridView
+                            android:id="@+id/z_actdetail_MemberGridView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:columnWidth="90dp"
+                            android:fadingEdge="none"
+                            android:gravity="center"
+                            android:listSelector="#00000000"
+                            android:numColumns="4"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="10dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 第三卡片 :联系人 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/z_actDetailBuildUserHeadLi"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_map_searchbox"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/z_actdetail_buildUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="发起人"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+
+                    <pri.z.show.MyCircleImageView
+                        android:id="@+id/z_actDetailBuildUserHead"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@id/z_actDetailBuildUserHeadLi"
+                    android:layout_weight="1"
+                    android:background="@drawable/z_map_searchbox"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="联系方式"
+                        android:textSize="@dimen/z_actdetail_commomsize"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/z_actDetailPhoneRel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/z_actdetail_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/z_mybtn_style_white"
+                                android:text="联系主办方"
+                                android:textSize="@dimen/z_actdetail_commomsize" />
+
+                            <ImageView
+                                android:id="@+id/z_activitydetail_callphone"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/z_callpphone"
+                                android:paddingRight="8dp"
+                                android:paddingTop="12dp" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/z_actDetailMsgBuilderBtn"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/z_actDetailPhoneRel"
+                            android:background="@drawable/z_mybtn_round_blue"
+                            android:text="私 信"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/z_actdetail_commomsize"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 热门评论 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="14dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="评论列表"
+                            android:textSize="@dimen/z_actdetail_itemnamesize" />
+
+                        <Button
+                            android:id="@+id/z_actCommentBtn"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/z_mybtn_round_blue"
+                            android:text="@string/z_str_comment"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/z_actdetail_commomsize" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="#cccccc" />
+
+                    <Button
+                        android:id="@+id/z_activityDetailNoComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="#cccccc"
+                        android:clickable="false"
+                        android:text="暂无评论"
+                        android:textColor="#ffffffff" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/z_actDetailDiscuss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:cacheColorHint="#00000000"
+                    android:listSelector="#00000000"
+                    android:scrollingCache="false" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/z_activityDetailCommentRel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/z_comment_bg2"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/z_activityDetailCommentBtnSend"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/z_mybtn_round_green"
+            android:text="评论"
+            android:textColor="#ffffffff" />
+
+        <EditText
+            android:id="@+id/z_activityDetailCommentSendMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@id/z_activityDetailCommentBtnSend"
+            android:background="@drawable/login_edit_normal"
+            android:singleLine="false"
+            android:textColor="@color/z_color_commmenttext"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

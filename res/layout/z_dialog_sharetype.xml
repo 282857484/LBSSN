@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/z_color_dialogmapbg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+         android:layout_marginBottom="8dp"
+        android:text="分享活动" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/z_color_titlebarbg" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/z_selectShareTypeLetsParty"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:text="分享到  来此Party动态"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/z_selectShareTypeOther"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:text="分享到  其他平台"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

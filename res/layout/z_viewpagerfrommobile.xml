@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/z_ViewPagerFromMobilePhotoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/z_ViewPagerFromMobileShowNumTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="18dp"
+        android:textColor="#ffffffff" />
+
+    <ImageButton
+        android:id="@+id/z_ViewPagerFromMobileRemoteIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="18dp"
+        android:background="@drawable/z_mybtn_delete" />
+
+</RelativeLayout>

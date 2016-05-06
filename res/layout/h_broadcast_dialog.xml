@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/h_broadcast_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="此处广播信息"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/h_broadcast_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:hint="请在这里输入广播信息"
+        android:selectAllOnFocus="true" />
+
+</LinearLayout>

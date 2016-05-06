@@ -1,0 +1,14 @@
+1:
+startActivity(intent);
+	overridePendingTransition(R.anim.z_push_left_in,R.anim.z_push_left_out);
+	
+2:
+
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+			finish();
+			overridePendingTransition(R.anim.z_push_myleft_in, R.anim.z_push_myleft_out);
+			return false;
+		}
+		return false;
+	}

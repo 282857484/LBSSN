@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+                <!-- 活动名称 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="队伍名称"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/h_teamname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:hint="请输入所创建活动名称"
+                    android:selectAllOnFocus="true" />
+ 
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="队伍存在时间"
+                    android:textSize="10pt" />
+                <!-- 不可获取焦点 -->
+
+                <EditText
+                    android:id="@+id/h_teamexisttime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="xxxx.xx.xx.xx.xx(年.月.日.时.分)" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="队伍最大人数"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/h_teammaxmember"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="xxxx.xx.xx.xx.xx(年.月.日.时.分)" />
+
+
+                <!-- 在这里进行选择分类（需要重写） -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="队伍描述描述"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/h_teamdescribe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请在这里输入有效信息"
+                    android:selectAllOnFocus="true" />
+
+                <!-- 在这里进行选择分类（需要重写） -->
+
+                <RadioGroup
+                    android:id="@+id/h_ispublicteammemberinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="是否公开成员信息" >
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteammemberinfo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="公开" />
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteammemberinfo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不公开" />
+                </RadioGroup>
+           
+
+                <!-- 在这里进行选择分类（需要重写） -->
+
+                <RadioGroup
+                    android:id="@+id/h_ispublicteaminfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="是否公开 队伍信息" >
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteaminfo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="公开" />
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteaminfo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不公开" />
+                </RadioGroup>
+      
+
+                <!-- 在这里进行选择分类（需要重写） -->
+
+                <RadioGroup
+                    android:id="@+id/h_ispublicteamtransfernamecard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="是否允许组员相互交换名片" >
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteamtransfernamecard1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="公开" />
+
+                    <RadioButton
+                        android:id="@+id/h_ispublicteamtransfernamecard2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不公开" />
+                </RadioGroup>
+          
+
+                <!-- 在这里进行选择分类（需要重写） -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注"
+                    android:textSize="10pt" />
+
+                <EditText
+                    android:id="@+id/h_teamremark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请在这里输入有效信息"
+                    android:selectAllOnFocus="true" />
+           
+    </LinearLayout>
+
+</ScrollView>

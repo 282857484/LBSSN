@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/h_activity_show_way_plan_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_wayplan"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp" >
+
+        <ImageView
+            android:id="@+id/z_waydetailStartImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/z_waydetailstart" />
+
+        <TextView
+            android:id="@+id/z_wayDetailStartPoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/z_waydetailStartImg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp" >
+
+        <ImageView
+            android:id="@+id/z_waydetailEndImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/z_waydetailend" />
+
+        <TextView
+            android:id="@+id/z_wayDetailEndPoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/z_waydetailEndImg" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/h_way_plan_detail_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:dividerHeight="10dp" >
+    </ListView>
+
+</LinearLayout>

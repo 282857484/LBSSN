@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_sharemoment"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/w_publishemoment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/z_mybtn_round_green"
+            android:padding="6dp"
+            android:text="发 送"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/z_mybtnsize"
+            android:enabled="false" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/z_sharemoment_lr"
+            android:layout_marginRight="@dimen/z_sharemoment_lr"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/w_edittextWriteMoment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="分享点什么..."
+                android:maxLength="450"
+                android:textColor="#5a5a5a"
+                android:textSize="@dimen/z_myedittextsize" >
+
+                <requestFocus/>
+            </EditText>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/z_momentShowNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible" 
+                    android:layout_marginRight="12dp"
+                    android:textColor="#919191"/>
+            </RelativeLayout>
+
+            <!-- 显示用户添加的图片 -->
+
+            <pri.z.show.PhotoGridView
+                android:id="@+id/z_shareMomentAddedGridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

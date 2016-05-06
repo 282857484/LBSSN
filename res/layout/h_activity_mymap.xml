@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:hardwareAccelerated="true" >
+
+    <pri.h.semap.MyLocationMapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:id="@+id/h_mapTopLi"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="6dip"
+        android:background="@drawable/z_map_searchbox" >
+
+        <ImageView
+            android:id="@+id/h_map_searchBtn"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/z_searchicon" />
+
+        <pri.h.semap.chooseview.ExpandTabView
+            android:id="@+id/h_expandtab_view"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" />
+
+        <pri.z.show.ClearEditText
+            android:id="@+id/h_map_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="4dip"
+            android:layout_toLeftOf="@id/h_map_searchBtn"
+            android:layout_toRightOf="@id/h_expandtab_view"
+            android:background="@null"
+            android:drawableRight="@drawable/clear_normal_list"
+            android:hint="搜索"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    
+
+    <ImageButton
+        android:id="@+id/h_switch_SatelliteLayer"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/h_mapTopLi"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/z_weixingicon" />
+
+    <ImageButton
+        android:id="@+id/h_cutphotoImageView"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/h_switch_SatelliteLayer"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/z_jietuicon" />
+
+    <ImageButton
+        android:id="@+id/h_map_refresh"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/h_cutphotoImageView"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/z_refreshicon" />
+
+    <ImageButton
+        android:id="@+id/h_direction"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/h_map_refresh"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/z_refreshicon"
+         />
+    
+    <ImageButton
+        android:id="@+id/h_switch_three_state"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/h_direction"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="12dip"
+        android:background="@drawable/z_refreshicon"
+        android:visibility="gone" />
+    
+    
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginBottom="80dip"
+        android:layout_marginRight="6dip" >
+
+        <Button
+            android:id="@+id/h_showwaydetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_map_searchbox"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dip"
+            android:text="详 情"
+            android:textColor="@color/z_color_titlebarbg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/z_map_searchbox"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/z_mymapWaySearchRel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/z_mymapWaySearchImg"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/z_luxianicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_mymapWaySearchImg"
+                android:text="路线"
+                android:textColor="@color/z_color_mapmenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/z_mymapWayBuildRel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/z_mymapWayBuildImg"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/z_buildicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_mymapWayBuildImg"
+                android:text="发起"
+                android:textColor="@color/z_color_mapmenu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/z_mymapWayOffLineRel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/z_mymapWayOffLineImg"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/z_lixiandituicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/z_mymapWayOffLineImg"
+                android:text="离线"
+                android:textColor="@color/z_color_mapmenu" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

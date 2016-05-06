@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+<!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_showImageTitleRel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_photoalbum"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/main_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_showImageTitleRel"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="20dip"
+        android:gravity="center"
+        android:verticalSpacing="20dip"
+        android:columnWidth="90dip"
+        android:numColumns="2" >
+    </GridView>
+
+</RelativeLayout>

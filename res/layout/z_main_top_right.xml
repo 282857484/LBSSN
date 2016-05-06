@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="45dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/z_color_maintoprightbg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/z_topRightDialogFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_mybtn_style_blue" 
+                android:paddingRight="@dimen/z_topright_r">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/z_buildactivitylogo" />
+				<!-- TextView与左边的距离保持在38=8+30dp,让文字距离一致 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="发起活动"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/z_mybtnsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/z_topRightDialogSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/z_mybtn_style_blue"
+                android:paddingRight="@dimen/z_topright_r" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/z_buildmomentlogo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="分享动态"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/z_mybtnsize" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

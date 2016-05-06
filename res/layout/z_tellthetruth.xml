@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@android:color/white"
+    >
+    
+     <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_TellTheTruthTitleRel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_activityLocalTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="真心话大冒险"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/z_TellTheTruthTitleRel" >
+
+        <RelativeLayout
+            android:id="@+id/z_tellthetruthFrame"
+            android:layout_width="fill_parent"
+            android:layout_height="300dip"
+            >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/z_tellthetruth_bg"
+                android:layout_gravity="center"
+                />
+            <ImageView 
+                android:id="@+id/z_tellTheTruthImgBegin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/z_tellthetruthstarticon"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/z_tellTheTruthTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="点击转盘中间开始"
+                android:textColor="#ff9933"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+        
+        
+                
+    </LinearLayout>
+
+</RelativeLayout>

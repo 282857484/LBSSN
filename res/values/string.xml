@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="z_mydialogbg">#ffffffff</drawable>
+    
+     <!-- 0904按钮按下和没有按钮的效果 -->
+    <drawable name="z_drawable_zan_normal">#cccccc</drawable>
+    <drawable name="z_drawable_zan_pressed">#ff0000</drawable>
+    
+    <!-- 蓝色的按钮样式 -->
+    <drawable name="z_drawable_blue_normal">#36abe0</drawable>
+    <drawable name="z_drawable_blue_pressed">#1d6a8f</drawable>
+    <!-- 黄色的按钮样式 -->
+    <drawable name="z_drawable_yellow_normal">#e1e19a</drawable>
+    <drawable name="z_drawable_yellow_pressed">#818124</drawable>
+    <!-- 白色的按钮样式 -->
+    <drawable name="z_drawable_white_normal">#ffffff</drawable>
+    <drawable name="z_drawable_white_pressed">#cccccc</drawable>
+    <!-- 浅绿色的按钮样式 -->
+    <drawable name="z_drawable_lgreen_normal">#66cc99</drawable>
+    <drawable name="z_drawable_lgreen_pressed">#669933</drawable>
+    <!-- 浅灰色的按钮样式 -->
+    <drawable name="z_drawable_lgray_normal">#cccccc</drawable>
+    <drawable name="z_drawable_lgray_pressed">#999999</drawable>
+    <!-- 浅灰色的我的消息活动项按钮样式 -->
+    <drawable name="z_drawable_lgray_act_normal">#e3e3e3</drawable>
+    <drawable name="z_drawable_lgray_act_pressed">#999999</drawable>
+    <!-- 红色的按钮样式 -->
+    <drawable name="z_drawable_red_normal">#f54936</drawable>
+    <drawable name="z_drawable_red_pressed">#be1c0a</drawable>
+    <!-- 紫色的按钮样式 -->
+    <drawable name="z_drawable_purple_normal">#bcb3f2</drawable>
+    <drawable name="z_drawable_purple_pressed">#9687eb</drawable>
+    
+    
+    <!-- 参加的按钮样式 -->
+    <drawable name="z_drawable_attend_normal">#36abe0</drawable>
+    <drawable name="z_drawable_attend_pressed">#1d6a8f</drawable>
+    <!-- 参加的按钮样式 -->
+    <drawable name="z_drawable_attention_normal">#6ecaea</drawable>
+    <drawable name="z_drawable_attention_pressed">#1d6a8f</drawable>
+    <!-- 参加的按钮样式 -->
+    <drawable name="z_drawable_comment_normal">#6ca1ff</drawable>
+    <drawable name="z_drawable_comment_pressed">#1d6a8f</drawable>
+    
+    <!-- ListView的按钮样式 -->
+    <drawable name="z_drawable_listview_normal">#ffffff</drawable>
+    <drawable name="z_drawable_listview_pressed">#e6e6e6</drawable>
+    
+    <!-- RelativeLayout的按钮样式 -->
+    <drawable name="z_drawable_relitem_wgray_normal">#ffffff</drawable>
+    <drawable name="z_drawable_relitem_wgray_pressed">#dbdbdb</drawable>
+</resources>

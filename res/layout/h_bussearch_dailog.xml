@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TableRow>
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="省市"
+            android:textSize="10pt"/>
+        <EditText 
+            android:id="@+id/h_bussearch_searchcity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入查询城市"
+            android:selectAllOnFocus="true"/>
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="查询公交"
+            android:textSize="10pt"
+      />
+        <EditText 
+            android:id="@+id/h_bussearch_searchbus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入公交班次（xx路公交）"
+            />
+    </TableRow>
+
+</TableLayout>

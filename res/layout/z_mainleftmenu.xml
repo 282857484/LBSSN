@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2d2d2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 图片的背景和整体是一个颜色 -->
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/z_more_left" >
+
+            <pri.z.show.MyCircleImageView
+                android:id="@+id/z_mainLeftMenuUserHead"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/z_mainLeftMenuUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:maxLength="20"
+            android:padding="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/z_mainLeftMenuUserDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffae"
+            android:gravity="left"
+            android:maxLength="100"
+            android:padding="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/z_mainLeftMenuUserDescSubmit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/z_mainleftsubmit"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/z_smalldivider" />
+    
+    <!-- 我的资料 -->
+
+    <RelativeLayout
+        android:id="@+id/z_mainLeftMenuUserInfoRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_mainLeftMenuUserInfoItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_myinfoicon" />
+
+        <TextView
+            android:id="@+id/z_mainLeftMenuUserInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_mainLeftMenuUserInfoItemICON"
+            android:gravity="center_vertical"
+            android:text="我的资料"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/z_smalldivider" />
+
+    <!-- 主页 -->
+
+    <RelativeLayout
+        android:id="@+id/z_leftPersonPageRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_moreMyCenterMomentItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_more_mymomentcentericon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_moreMyCenterMomentItemICON"
+            android:gravity="center_vertical"
+            android:text="个人主页"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#d2d2d2" />
+
+    <!-- 主办 -->
+
+    <RelativeLayout
+        android:id="@+id/z_leftMyActivityRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_moreMyActivityItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_more_myactivityicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_moreMyActivityItemICON"
+            android:gravity="center_vertical"
+            android:text="主办活动"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/z_smalldivider" />
+    <!-- 参加 -->
+
+    <RelativeLayout
+        android:id="@+id/z_leftAttendActivitiesRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_moreMtAttenedActivityItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_more_attenedicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_moreMtAttenedActivityItemICON"
+            android:gravity="center_vertical"
+            android:text="已参加"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/z_smalldivider" />
+    <!-- 关注 -->
+
+    <RelativeLayout
+        android:id="@+id/z_leftAttentionActivitiesRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_moreMtAttentionActivityItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_more_attentionicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_moreMtAttentionActivityItemICON"
+            android:gravity="center_vertical"
+            android:text="我的关注"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#d2d2d2" />
+    
+    <!-- 设置 -->
+
+    <RelativeLayout
+        android:id="@+id/z_mainLeftMenuSettingRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_mybtn_style_white" >
+
+        <ImageView
+            android:id="@+id/z_mainLeftMenuSettingItemICON"
+            android:layout_width="@dimen/z_more_lefticon_wh"
+            android:layout_height="@dimen/z_more_lefticon_wh"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/z_more_left"
+            android:background="@drawable/z_setteingicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/z_more_item_height"
+            android:layout_marginLeft="@dimen/z_more_iconleft"
+            android:layout_toRightOf="@id/z_mainLeftMenuSettingItemICON"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textSize="@dimen/z_more_item" />
+
+        <ImageView
+            android:layout_width="@dimen/z_more_righticon_width"
+            android:layout_height="@dimen/z_more_righticon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/z_more_right"
+            android:background="@drawable/z_more_msg_righticon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

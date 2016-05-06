@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pri.z.show"
+    android:installLocation="preferExternal"
+    android:versionCode="9"
+    android:versionName="3.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <!-- 1206环信 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+
+    
+    <!-- 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+     -->
+     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" >
+    </uses-permission>
+    <!-- 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 允许程序修改全局音频 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- HB -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <!--
+        <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+     -->
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- WIFI -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- android:theme="@style/AppTheme" -->
+    <application
+        android:name="pub.application.SEMapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/z_logo"
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustPan" >
+        <!-- 最开始的Activity主题，不能删除该主题，否则会有全屏白色出现android:theme="@style/MyTheme" -->
+        <activity
+            android:name="pri.z.show.Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name="pri.z.main.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- ZZK20140520 -->
+        <activity
+            android:name="pri.z.show.ShowMyAttendActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.introduce.IntroduceApp"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.show.ShowMyAttentionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.show.ActivityDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.ActivityLocal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleTop" />
+        <activity
+            android:name="pri.z.show.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.FeedBack"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.ShowMyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.ShowMyInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.LoginOrRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.FindPwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.UserRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.MyBelongs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.MomentDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.CenterInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.CenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.CenterMoment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.MyMomentCenter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.CommonSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.DistanceSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.MyMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.imgselect.ImageSelectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.imgselect.ShowImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.photoshow.SimpleSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.photoshow.ViewPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.selectphoto.ViewPagerNow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.photoshow.ViewPagerFromNetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.photoshow.ShowDatuFromNet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.photoshow.ViewPagerPhotoWall"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.MsgActivityDiscuss"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.show.ActivityMembers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pri.z.main.MainTopRight"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleTop" />
+        <activity
+            android:name="pri.z.show.ExitFromSettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name="pri.z.build.ShareMoment"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="pri.z.selectphoto.TestPicActivity"
+           android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.selectphoto.TestPicActivityNow"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name="pri.z.selectphoto.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.selectphoto.ImageGridActivityNow"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="pri.z.selectphoto.PublishedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.selectphoto.PhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <activity
+            android:name="pri.h.semap.myMap"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name" />
+
+        <!-- HB -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name="pub.netservice.NetService"
+            android:exported="false" >
+            <intent-filter>
+                <action
+                    android:name="com.example.semap.NetService"
+                    android:enabled="true" />
+            </intent-filter>
+            <intent-filter android:priority="1000" >
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.baidu.mapapi.search.PlaceCaterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="pri.h.semap.CustomRouteOverlayDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="sensor" >
+        </activity>
+        <!-- 请拷贝的时候修改路径！！！ -->
+        <activity
+            android:name="pri.h.semap.OfflineDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/demo_name_offline"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.h.semap.poiInfoList"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/poiinfolist"
+            android:screenOrientation="sensor" >
+        </activity>
+        <activity
+            android:name="pri.h.semap.showWayPlanDetail"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.build.BuildActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <!-- 小游戏 -->
+        <activity
+            android:name="pri.z.game.Spy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.game.SpyMainGame"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.game.TellTheTruth"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.game.GameMenu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.game.DiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="pri.z.show.CarePeople"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <!-- 1206环信 -->
+        
+        <activity
+            android:name="com.easemob.chatuidemo.activity.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ContactsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.easemob.chatuidemo.activity.MainActivityHX"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <!-- 开屏页 -->
+           <activity
+            android:name="com.easemob.chatuidemo.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        
+        <!-- 登陆 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.AddContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ExitGroupDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" >
+        </activity>
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 地图 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.BaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 自定义的alertdialog -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowBigImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowNormalFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 黑名单 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.BlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.PublicGroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 语音通话页面 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.VoiceCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/nornal_style" >
+        </activity>
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupSimpleDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.GroupBlacklistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.EditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ShowVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- choose video -->
+        <activity
+            android:name="com.easemob.chatuidemo.activity.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.easemob.chatuidemo.activity.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="coswkacs#letsparty" />
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+        
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+    </application>
+
+</manifest>

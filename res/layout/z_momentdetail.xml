@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/z_momentDetailTitleRel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/z_color_titlebarbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/z_momentDetailTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/z_str_momentdetail"
+            android:textColor="@color/z_color_titlebartextbg"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/z_momentDetailProgressBar"
+            android:layout_width="@dimen/z_titleprogress_wh"
+            android:layout_height="@dimen/z_titleprogress_wh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/z_momentDetailTitleName"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/z_progressbarmycolor" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/z_momentDetailNoNetImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/z_hasnonet"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/z_momentDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/z_momentDetailTitleRel"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/z_momentdetail_lr"
+            android:layout_marginRight="@dimen/z_momentdetail_lr"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp" >
+
+                <pri.z.show.MyCircleImageView
+                    android:id="@+id/z_momentDetailHead"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="friend" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/z_commentDetailuserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/z_color_moment_usernameman" />
+
+                        <TextView
+                            android:id="@+id/z_commentDetailTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/z_color_time" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/z_commentDetailContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15sp" />
+
+                    <!-- 要显示的图片 -->
+
+                    <pri.z.show.PhotoGridView
+                        android:id="@+id/z_MomentDetailGridview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:horizontalSpacing="3dp"
+                        android:numColumns="3"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="3dp"
+                        android:visibility="gone" />
+
+                    <!-- 赞     踩     评论 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal" >
+
+                        <!-- 踩 -->
+
+                        <RelativeLayout
+                            android:id="@+id/z_commentDetailUnLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/z_itemCaiImg"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/z_caiicon" />
+
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/z_itemCaiImg" >
+
+                                <TextView
+                                    android:id="@+id/z_commentDetailTrampleNum"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/z_commentDetailTrampleAnim"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="+1"
+                                    android:textColor="#FF0000"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <!-- 赞 -->
+
+                        <RelativeLayout
+                            android:id="@+id/z_commentDetailLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:layout_toLeftOf="@id/z_commentDetailUnLike" >
+
+                            <ImageView
+                                android:id="@+id/z_itemZanImg"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/z_zanicon" />
+
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/z_itemZanImg" >
+
+                                <TextView
+                                    android:id="@+id/z_commentDetailPraiseNum"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="0" />
+
+                                <TextView
+                                    android:id="@+id/z_commentDetailPraiseAnim"
+                                    android:layout_width="40dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="+1"
+                                    android:textColor="#FF0000"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 评论 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="评论列表"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/z_momentCommentBtn"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/z_mybtn_round_blue"
+                        android:text="@string/z_str_comment"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/z_actdetail_commomsize" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="#cccccc" />
+
+                <Button
+                    android:id="@+id/z_momentDetailNoComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#cccccc"
+                    android:clickable="false"
+                    android:text="暂无评论"
+                    android:textColor="#ffffffff"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/z_commentDetailCommentsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/z_momentDetailCommentRel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/z_comment_bg2"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/z_momentDetailCommentBtnSend"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/z_mybtn_round_green"
+            android:text="评论"
+            android:textColor="#ffffffff" />
+
+        <EditText
+            android:id="@+id/z_momentDetailCommentSendMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@id/z_momentDetailCommentBtnSend"
+            android:background="@drawable/login_edit_normal"
+            android:singleLine="false"
+            android:textColor="@color/z_color_commmenttext"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

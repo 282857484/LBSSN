@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="选项2"/>
+    <item
+        android:id="@+id/action_plus"
+        android:actionProviderClass="com.example.wechatsample.PlusActionProvider"
+        android:showAsAction="ifRoom"
+        android:title="选项2"/>
+    <item
+        android:id="@+id/action_card"
+        android:title="选项"/>
+    <item
+        android:id="@+id/action_settings"
+        android:title="选项"/>
+    <item
+        android:id="@+id/action_feed"
+        android:title="选项"/>
+
+
+</menu>

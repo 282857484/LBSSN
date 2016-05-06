@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/z_msg_dividerpadding"
+    android:paddingLeft="@dimen/z_msg_left"
+    android:paddingRight="@dimen/z_msg_right"
+    android:paddingTop="@dimen/z_msg_dividerpadding" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/z_itemMsgActivityJoinUserHead"
+            android:layout_width="@dimen/z_msg_headwh"
+            android:layout_height="@dimen/z_msg_headwh" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/z_itemMsgActivityJoinUserHead" >
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityJoinUserNameAndTimeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityJoinUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="PushName"
+                    android:textColor="@color/z_color_msg_username" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityJoinTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="ActivityJoinTime"
+                    android:textColor="@color/z_color_msg_time" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/z_itemMsgActivityJoinStatue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityJoinUserNameAndTimeRel"
+                android:paddingBottom="8dp"
+                android:text="JoinStatue" />
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgActivityJoinItemRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgActivityJoinStatue"
+                android:background="@drawable/z_myrel_style_lgray_msg"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/z_itemMsgActivityJoinActLogo"
+                    android:layout_width="@dimen/z_msg_logowh"
+                    android:layout_height="@dimen/z_msg_logowh" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgActivityJoinActivityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/z_itemMsgActivityJoinActLogo"
+                    android:paddingLeft="6dp"
+                    android:text="DoDetailThing"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/z_itemMsgActivityJoinDealLi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/z_msg_left"
+        android:paddingRight="@dimen/z_msg_right"
+        android:paddingTop="@dimen/z_msg_dividerpadding" >
+
+        <TextView
+            android:id="@+id/z_itemMsgActivityJoinDealAgreeTv"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/z_mybtn_round_blue"
+            android:text="同意"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/z_itemMsgActivityJoinDealDisAgreeTv"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/z_mybtn_round_gray"
+            android:text="拒绝 "
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

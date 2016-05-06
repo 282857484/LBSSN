@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/w_header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/z_color_onrefreshbg"
+    android:gravity="bottom" >
+
+    <RelativeLayout
+        android:id="@+id/w_xlistview_header_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/w_xlistview_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/w_xlistview_header_hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/w_xlistview_header_hint_normal"
+                android:layout_centerInParent="true"
+                android:textColor="#6a6a6a"
+                android:textSize="17sp" 
+                android:textStyle="bold"/>
+            
+             <!-- style="?android:attr/progressBarStyleSmall" -->
+            <ProgressBar
+                android:id="@+id/w_xlistview_header_progressbar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/w_xlistview_header_hint_textview"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/w_xlistview_header_last_time"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/w_xlistview_header_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#cccccc"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/w_xlistview_header_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/w_xlistview_header_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-35dp"
+            android:src="@drawable/w_xlistview_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

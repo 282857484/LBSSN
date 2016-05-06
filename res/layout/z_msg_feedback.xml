@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/z_msg_dividerpadding"
+    android:paddingLeft="@dimen/z_msg_left"
+    android:paddingRight="@dimen/z_msg_right"
+    android:paddingTop="@dimen/z_msg_dividerpadding" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/z_itemMsgFeedBackUserHead"
+            android:layout_width="@dimen/z_msg_headwh"
+            android:layout_height="@dimen/z_msg_headwh"
+            android:background="@drawable/z_logo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/z_itemMsgFeedBackUserHead" >
+
+            <RelativeLayout
+                android:id="@+id/z_itemMsgFeedBackUserNameAndTimeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/z_itemMsgFeedBackUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="PushName"
+                    android:textColor="@color/z_color_msg_username" />
+
+                <TextView
+                    android:id="@+id/z_itemMsgFeedBackTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/z_color_msg_time" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/z_itemMsgFeedBackContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/z_itemMsgFeedBackUserNameAndTimeRel"
+                android:paddingBottom="8dp"
+                android:text="LeaveWordComment" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
